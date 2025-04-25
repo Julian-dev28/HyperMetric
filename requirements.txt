@@ -8,3 +8,4 @@ python-dotenv==1.1.0
 requests==2.32.3
 rich==14.0.0
 urllib3==2.4.0
+statistics>=1.0.3.5
