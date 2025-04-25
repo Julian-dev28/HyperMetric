@@ -1,10 +1,10 @@
-# HyperCompare
+# HyperMetric
 
 A command-line tool for comparing LLM models on the Hyperbolic platform.
 
 ## About
 
-HyperCompare is a powerful benchmarking tool that helps developers make informed decisions when selecting LLM models on the Hyperbolic platform. The tool compares models across three key dimensions:
+HyperMetric is a powerful benchmarking tool that helps developers make informed decisions when selecting LLM models on the Hyperbolic platform. The tool compares models across three key dimensions:
 
 - **Speed**: Time to first token, total latency, and tokens per second
 - **Accuracy**: Response consistency and quality
@@ -14,8 +14,8 @@ HyperCompare is a powerful benchmarking tool that helps developers make informed
 
 1. Clone this repository:
 ```
-git clone https://github.com/yourusername/hypercompare.git
-cd hypercompare
+git clone https://github.com/yourusername/hypermetric.git
+cd hypermetric
 ```
 
 2. Install dependencies:
@@ -34,23 +34,23 @@ echo "HYPERBOLIC_API_KEY=your_key_here" > .env
 Basic comparison between two models:
 
 ```
-python hypercompare.py meta-llama/Meta-Llama-3-70B-Instruct deepseek-ai/DeepSeek-V3-0324
+python hypermetric.py meta-llama/Meta-Llama-3-70B-Instruct deepseek-ai/DeepSeek-V3-0324
 ```
 
 Advanced options:
 
 ```
 # Compare models with custom prompt set
-python hypercompare.py model1 model2 --prompt-set humaneval
+python hypermetric.py model1 model2 --prompt-set humaneval
 
 # Run more test iterations for better consistency measurement
-python hypercompare.py model1 model2 --runs 5
+python hypermetric.py model1 model2 --runs 5
 
 # Use custom prompts from a JSON file
-python hypercompare.py model1 model2 --custom-prompts my_prompts.json
+python hypermetric.py model1 model2 --custom-prompts my_prompts.json
 
 # Output results in JSON format for further processing
-python hypercompare.py model1 model2 --output json
+python hypermetric.py model1 model2 --output json
 ```
 
 ### Example custom prompts file format (JSON):

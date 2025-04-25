@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HyperCompare - A CLI tool for comparing LLM models on Hyperbolic's platform
+HyperMetric - A CLI tool for comparing LLM models on Hyperbolic's platform
 
 This tool lets developers benchmark and compare different LLM models across
 metrics like speed, accuracy, and cost to make informed decisions for their
