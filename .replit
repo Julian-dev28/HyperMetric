@@ -1,4 +1,21 @@
+entrypoint = "hypercompare.py"
 modules = ["python-3.12"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["cacert"]
+
+[deployment]
+run = ["python3", "hypercompare.py"]
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 5576806
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 hypercompare.py meta-llama/Meta-Llama-3-70B-Instruct deepseek-ai/DeepSeek-V3-0324"
