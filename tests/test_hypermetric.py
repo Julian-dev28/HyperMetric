@@ -73,14 +73,14 @@ class TestHypermetric(unittest.TestCase):
         results = {
             "responses": [["Hello world", "Hello world", "Hello world"]]
         }
-        consistency = hypermetric.calculate_consistency(results)
+        consistency = hypermetric.calculate_consistency(results["responses"][0])
         self.assertAlmostEqual(consistency, 100.0)
 
         # Test completely different responses
         results = {
             "responses": [["Hello world", "Goodbye moon", "Testing 123"]]
         }
-        consistency = hypermetric.calculate_consistency(results)
+        consistency = hypermetric.calculate_consistency(results["responses"][0])
         self.assertLess(consistency, 100.0)
 
     def test_calculate_cost(self):
